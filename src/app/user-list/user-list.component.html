@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>User Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor = "let user of users;">
+    <td>{{user.name}}</td>
+    <td>{{user.username}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.phone}}</td>
+    <td><span [routerLink]= "edit">Edit</span></td>
+    <td><span (click) = deleteUser(user.id)>Delete</span></td>
+    
+  </tr>
+</table>
